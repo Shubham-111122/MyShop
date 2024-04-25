@@ -1,0 +1,24 @@
+/* Adjust image size */
+.carousel-item img {
+  max-height: 400px; /* Set your desired maximum height */
+  width: auto; /* Maintain aspect ratio */
+}
+.carousel {
+  position: relative;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}

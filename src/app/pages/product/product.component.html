@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+<div class="container" style="margin-top: 100px" *ngIf="product">
+  <div class="row">
+    <div class="col-md-6">
+      <!-- Product Image -->
+      <img [src]="product.thumbnail" alt="Product" class="img-fluid" />
+    </div>
+    <div class="col-md-6">
+      <!-- Product Info -->
+      <h2 class="mb-4">{{ product.title }}</h2>
+      <p class="lead mb-4">{{ product.description }}</p>
+      <p><strong>Price:</strong> ${{ product.price }}</p>
+      <!-- Customer Rating -->
+      <div class="mb-4">
+        <span class="text-warning"
+          >&#9733; &#9733; &#9733; &#9733; &#9734;</span
+        >
+        <span class="ms-2">{{ product.rating }}</span>
+      </div>
+      <!-- Customer Reviews -->
+      <div class="mb-4">
+        <h4>Customer Reviews</h4>
+        <p>No reviews yet.</p>
+      </div>
+      <!-- Buttons -->
+      <button class="btn btn-primary me-2" (click)="addToCart(product)">
+        Add to Cart
+      </button>
+      <button class="btn btn-outline-danger me-2" (click)="buyNow(product)">
+        Buy Now
+      </button>
+    </div>
+  </div>
+</div>

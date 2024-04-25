@@ -1,0 +1,9 @@
+/* Style for the logo image */
+.navbar-brand img {
+  max-width: 40px; /* Adjust the maximum width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add some spacing to the right of the logo */
+  vertical-align: middle; /* Align the logo vertically */
+  border-radius: 50%; /* Optionally, add border-radius for a circular logo */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}

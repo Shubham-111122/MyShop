@@ -1,0 +1,68 @@
+.card {
+  height: 500px; /* Set a fixed height for each card */
+}
+
+.stars {
+  color: #ffc107; /* Star color */
+}
+
+.star {
+  font-size: 1.5rem; /* Star size */
+}
+
+.star.filled {
+  color: #ffc107; /* Filled star color */
+}
+
+.rating {
+  margin-left: 0.5rem; /* Spacing between stars and rating */
+}
+.fixed-height-img {
+  height: 300px; /* Set a fixed height for the product images */
+}
+
+.price-info {
+  display: flex;
+  align-items: center;
+}
+
+.discount-price {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: red;
+}
+
+.stars {
+  display: flex;
+}
+
+.star {
+  font-size: 1.5rem; /* Star size */
+}
+
+.rating {
+  margin-left: 0.5rem; /* Spacing between stars and rating */
+}
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  z-index: 1000; /* Ensure the button is above other elements */
+  display: none; /* Initially hide the button */
+}
+
+.back-to-top.show {
+  display: block; /* Show the button when scrolled */
+}
+/* Adjust margin to make space for the fixed alert */
+/* Styling for the fixed alert */
+.alert {
+  z-index: 1000; /* Ensure the alert appears on top of other elements */
+  position: fixed; /* Fix the position of the alert */
+}

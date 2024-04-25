@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+<div class="container" style="margin-top: 100px">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4">My Profile</h2>
+
+          <!-- User Information -->
+          <div class="mb-4">
+            <h4 class="mb-3">User Information</h4>
+            <hr />
+            <div class="row mb-3">
+              <div class="col-md-4 fw-bold">Name:</div>
+              <div class="col-md-8">{{ user.name }}</div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 fw-bold">Email:</div>
+              <div class="col-md-8">{{ user.email }}</div>
+            </div>
+            <!-- Add more user information as needed -->
+          </div>
+
+          <!-- Previous Orders -->
+          <div class="mb-4">
+            <h4 class="mb-3">Previous Orders</h4>
+            <hr />
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item" *ngFor="let order of user.orders">
+                {{ order }}
+              </li>
+            </ul>
+            <div
+              *ngIf="user.orders.length === 0"
+              class="text-muted text-center mt-3"
+            >
+              No previous orders.
+            </div>
+          </div>
+
+          <!-- Edit Profile Button -->
+          <div class="text-center">
+            <button class="btn btn-primary" (click)="editProfile()">
+              Edit Profile
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

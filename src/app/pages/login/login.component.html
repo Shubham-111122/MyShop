@@ -1,0 +1,80 @@
+<div class="container">
+  <!-- MyShop Logo -->
+  <div class="text-center mb-4">
+    <a href="/">
+      <!-- Update the href attribute to point to the home page -->
+      <img src="../../../assets/myshop.png" alt="MyShop" class="logo-img" />
+    </a>
+  </div>
+  <!-- Login Box -->
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="login-box">
+        <h2 class="text-center mb-4">Login</h2>
+        <!-- Add [formGroup] directive to bind FormGroup to form -->
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <!-- Bind form control to input field with formControlName -->
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              [formControlName]="'email'"
+              placeholder="Enter your email"
+            />
+            <!-- Display validation message if email is invalid and form is submitted -->
+            <div
+              *ngIf="submitted && formControls['email'].errors"
+              class="text-danger"
+            >
+              <div *ngIf="formControls['email'].errors['required']">
+                <!-- Fix here -->
+                Email is required.
+              </div>
+              <div *ngIf="formControls['email'].errors['email']">
+                Please enter a valid email address.
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <!-- Bind form control to input field with formControlName -->
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              [formControlName]="'password'"
+              placeholder="Enter your password"
+            />
+            <!-- Display validation message if password is invalid and form is submitted -->
+            <div
+              *ngIf="submitted && formControls['password'].errors"
+              class="text-danger"
+            >
+              <div *ngIf="formControls['password'].errors['required']">
+                <!-- Fix here -->
+                Password is required.
+              </div>
+              <div *ngIf="formControls['password'].errors['minlength']">
+                <!-- Fix here -->
+                Password must be at least 6 characters long.
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Register Option -->
+  <div class="row mt-3 justify-content-center">
+    <div class="col-md-6 text-center">
+      <p>
+        Don't have an account?
+        <a href="register" class="register-link">Register</a>
+        <!-- Update the href attribute to point to the register page -->
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.container {
+  margin-top: 80px;
+}
+
+.login-box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.logo-img {
+  max-width: 150px;
+}
+
+.register-link {
+  color: #007bff;
+}
+
+.register-link:hover {
+  text-decoration: none;
+  color: #0056b3;
+}
